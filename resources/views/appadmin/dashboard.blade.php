@@ -54,7 +54,11 @@
   <div class="content-wrapper">
    @yield('headercontent')
 
-   @yield('maincontent')  
+ 
+   @yield('maincontent') 
+
+   @yield('content')
+
 
   </div>
   @include('appadmin.footer')

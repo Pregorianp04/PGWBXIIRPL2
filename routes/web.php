@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashoardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,14 @@ Route::get('/dashboard', function () {
     return view('appadmin.dashboard');
 });
 
-Route::get('dashboard', function () {
-    return view('appadmin.content');
+Route::get('/dashboard', function () {
+     return view('appadmin.content');
 });
+
+Route::get('/dashboard', function () {
+    return view('produk');
+});
+
+Route::get('appadmin.dashboard', [DashoardController::class, 'index']);
+
+Route::get('/produk', [ProdukController::class, 'index']);
